@@ -8,13 +8,13 @@ int main()
 
     cout << "Enter the perimeter of an equilateral triangle: ";
     double P;
-    cin >> P; // ввод периметра
+    cin >> P; // perimiter
 
-    double a = P / 3; // сторона
-    double S = sqrt(P / 2 * pow((P / 2 - a), 3)); // площадь
+    double a = P / 3; // side
+    double S = sqrt(P / 2 * pow((P / 2 - a), 3)); // area
 
 
-    cout.precision(3); // округление в выводе до 2 знаков после запятой
+    cout.precision(3); // rounding to 2 decimal places in the output
 
     cout << "Side\tArea\n";
     cout << a << '\t' << S << endl;
