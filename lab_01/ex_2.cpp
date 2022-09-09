@@ -1,18 +1,21 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
 //int main()
 //{
 //	system("chcp 1251");
 //	double a, b;
-//	cout << "Введите a и b:\n";
-//	cin >> a; // ввод с клавиатуры значения a
-//	cin >> b; // ввод с клавиатуры значения b
-//	double x = a / b;  //вычисление значения x
+//	cout << "Р’РІРµРґРёС‚Рµ a Рё b:\n";
+//	cin >> a; // РІРІРѕРґ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹ Р·РЅР°С‡РµРЅРёСЏ a
+//	cin >> b; // РІРІРѕРґ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹ Р·РЅР°С‡РµРЅРёСЏ b
+//	double x = a / b; // РІС‹С‡РёСЃР»РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ x
 //	//int x = a / b;
+//
 //	cout.precision(3);
+//
+//
+//	cout << "\nx = " << x << endl; //РІС‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р° РЅР° СЌРєСЂР°РЅ
 //	cout << sizeof(a / b) << ends << sizeof(x) << endl;
-//	cout << "\nx = " << x << endl; //вывод результата на экран
 //	return 0;
 //}
 
@@ -20,14 +23,14 @@ int main()
 {
 	system("chcp 1251");
 	string name;
-	cout << "Введите свое имя\n";
+	cout << "Р’РІРµРґРёС‚Рµ СЃРІРѕРµ РёРјСЏ\n";
 	double a, b;
-	cout << "Введите a и b:\n";
+	cout << "Р’РІРµРґРёС‚Рµ a Рё b:\n";
 	cin >> a;
 	cin >> name;
 	cin >> b;
 	double x = a / b;
 	cout << "\nx = " << x << endl;
-	cout << "Привет, " << name << "!\n";
+	cout << "РџСЂРёРІРµС‚, " << name << "!\n";
 	return 0;
 }
