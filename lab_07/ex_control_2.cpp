@@ -25,7 +25,7 @@ EquationDecision get_decision(double a, double b, double c)
 
 int main()
 {
-	cout << "Input equation coefficients" << endl;
+	cout << "Enter equation coefficients (a, b, c):" << endl;
 	cout << "a = ";
 	int a, b, c;
 	cin >> a;
