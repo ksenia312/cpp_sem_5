@@ -26,5 +26,5 @@ int main()
 		out << text;
 	}
 
-	cout << "Done!" << endl;
+	cout << "Saved to C:/Users/Ksenia/Documents/5 sem/cpp/lab_06/ex_control_1/poem.txt" << endl;
 }
