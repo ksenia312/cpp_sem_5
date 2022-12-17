@@ -3,7 +3,7 @@
 
 void Dinner::print()
 {
-	cout << "Dinner for " << person.role << endl;
+	cout << "Dinner for " << person->role << endl;
 
 	for (auto& product : products[get_person_id()]) {
 		cout << product << endl;
@@ -13,7 +13,7 @@ void Dinner::print()
 
 void Dinner::print_availability(string food)
 {
-	cout << person.role << "'s dinner " << (contains(food) ? "contains " : "doesn't contain ") << food << endl;
+	cout << person->role << "'s dinner " << (contains(food) ? "contains " : "doesn't contain ") << food << endl;
 }
 
 bool Dinner::contains(string food)
@@ -28,11 +28,11 @@ bool Dinner::contains(string food)
 
 int Dinner::get_person_id()
 {
-	if (person.role == "father") {
+	if (person->role == "father") {
 		return 0;
 
 	}
-	else if (person.role == "mother") {
+	else if (person->role == "mother") {
 		return 1;
 	}
 	else return 2;

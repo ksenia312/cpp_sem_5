@@ -12,3 +12,8 @@ void Father::buy(int count)
 		cout << "Father didn't have enough money to buy something for " << count << " rubles" << endl;
 	}
 }
+
+void Father::say_hello()
+{
+	cout << "Hello, I'm father and I'm working now" << endl;
+}

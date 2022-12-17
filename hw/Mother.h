@@ -7,5 +7,6 @@ public:
 		: Person(name, phone, age, "mother", money) {}
 
 	void change_phone(string); // Individual method - changes phone
+	void say_hello() override;
 };
 

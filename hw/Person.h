@@ -11,6 +11,8 @@ public:
 
 	string role;
 
+	virtual void say_hello() = 0;
+
 	void to_file(bool); // Write current instance to file
 
 	void print(); // Print info about person

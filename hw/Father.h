@@ -8,5 +8,7 @@ public:
 		: Person(name, phone, age, "father", money) {}
 
 	void buy(int); // Individual method - subtracts the entered amount from the money
+
+	void say_hello() override;
 };
 

@@ -9,9 +9,9 @@ int main()
 	string spacer = "--------------------------------";
 
 	// Define variables for family members
-	Mother mother = Mother("Alice", "+7 (999) 888-88-88", 32, 32000);
-	Father father = Father("Bob", "+7 (919) 348-58-86", 35, 100000);
-	Child child = Child("Anton", "+7 (533) 254-56-73", 6, 300);
+	Mother *mother = new Mother("Alice", "+7 (999) 888-88-88", 32, 32000);
+	Father *father = new Father("Bob", "+7 (919) 348-58-86", 35, 100000);
+	Child *child = new Child("Anton", "+7 (533) 254-56-73", 6, 300);
 
 	// Define variables for their dinners
 	Dinner mother_dinner = Dinner(mother);
@@ -42,11 +42,11 @@ int main()
 	cout << spacer << endl;
 
 	// Collection - array family
-	Person family[3] = { child, mother, father };
+	Person* family[3] = { child, mother, father };
 
 	// Print info about family members
 	for (auto& person : family) {
-		person.print();
+		person->print();
 		cout << endl;
 	}
 
@@ -54,14 +54,14 @@ int main()
 
 	// Check if members can buy something for N rubles
 	for (auto& person : family) {
-		if (person.can_buy(300)) {
-			cout << person.role << " can buy video game for 300 rubles" << endl;
+		if (person->can_buy(300)) {
+			cout << person->role << " can buy video game for 300 rubles" << endl;
 		}
-		if (person.can_buy(30000)) {
-			cout << person.role << " can buy sofa for 30000 rubles" << endl;
+		if (person->can_buy(30000)) {
+			cout << person->role << " can buy sofa for 30000 rubles" << endl;
 		}
-		if (person.can_buy(50000)) {
-			cout << person.role << " can buy computer for 50000 rubles" << endl;
+		if (person->can_buy(50000)) {
+			cout << person->role << " can buy computer for 50000 rubles" << endl;
 		}
 		cout << endl;
 	}
@@ -71,21 +71,24 @@ int main()
 	// Individual methods
 
 	// Mother can change her phone
-	mother.change_phone("+7 (949) 838-58-68");
+	mother->change_phone("+7 (949) 838-58-68");
 	// Father can buy something
-	father.buy(3000);
+	father->buy(3000);
 
 	cout << spacer << endl;
 
 	// Write family to file
-	mother.to_file(true);
-	father.to_file(false);
-	child.to_file(false);
+	mother->to_file(true);
+	father->to_file(false);
+	child->to_file(false);
+
+	mother->say_hello();
+	father->say_hello();
+	child->say_hello();
 }
 
 
 //OUTPUT
-//
 //--------------------------------
 //Dinner for mother
 //salad
@@ -141,3 +144,6 @@ int main()
 //Father bought something for 3000 rubles
 //Father now has 97000 rubles
 //--------------------------------
+//Hello, I'm mother and I want to buy dress
+//Hello, I'm father and I'm working now
+//Hello, I'm child and I'm playing a game
